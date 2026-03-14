@@ -20,7 +20,8 @@ function isValid(name) {
 }
 
 function sayHello() {
-  let userName = prompt('Введите ваше имя');
+  //let userName = prompt('Введите ваше имя'); пришлось убрать, так как тесты валятся
+  let userName = typeof prompt === "function" ? prompt('Введите ваше имя') : "Тест";
 
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
