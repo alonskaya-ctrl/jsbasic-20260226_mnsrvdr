@@ -22,7 +22,7 @@ function isValid(name) {
 function sayHello() {
 // закомментировала чтобы тесты не падали
 //    let userName = prompt('Введите ваше имя');
-let userName = "Тест"; // любое валидное имя
+let userName = "Даша"; // любое валидное имя
 
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
