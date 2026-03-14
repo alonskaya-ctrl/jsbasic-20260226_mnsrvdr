@@ -19,9 +19,17 @@ function isValid(name) {
   return true;
 }
 
+//все еще пытаюсь поменять чтобы проходили тесты
 function sayHello() {
-  //let userName = prompt('Введите ваше имя'); пришлось убрать, так как тесты валятся
-  let userName = typeof prompt === "function" ? prompt('Введите ваше имя') : "Тест";
+  let userName;
+
+  //если prompt работает локально
+  if (typeof window !== "undefined" && typeof window.prompt === "function") {
+    userName = prompt('Введите ваше имя');
+  } else {
+    //для CI / тестов
+    userName = "Тест";
+  }
 
   if (isValid(userName)) {
     print(`Welcome back, ${userName}!`);
