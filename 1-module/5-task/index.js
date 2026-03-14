@@ -36,4 +36,4 @@ function truncate(str, maxlength) {
 //console.log(truncate("", 0));                // ""
 
 //Строка с пробелами
-//console.log(truncate("  JavaScript  ", 5));  // "  Ja…"
+//console.log(truncate("  JavaScript  ", 5));  // "  Ja…" 
