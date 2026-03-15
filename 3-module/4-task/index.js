@@ -35,6 +35,12 @@ function showSalary(users, age) {
     .join('\n');
 }
 
+function showSalary(users, age) {
+  let filtered = users.filter(user => user.age <= age);
+  let lines = filtered.map(user => `${user.name}, ${user.balance}`);
+  return lines.join('\n');
+}
+
 console.log(showSalary(users, 25));
 /* Вывод:
 Golden Branch, $1,825.65
